@@ -3,9 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nébula, artista digital especializada en paisajes de ciencia ficción.">
   <title>Nébula | Artista digital</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Nébula</h1>
+
+  <header>
+    <div class="marca">
+      <img class="logo" src="asset/img/logo.svg" alt="Logotipo de Nébula: planeta sobre fondo transparente" width="56" height="56" loading="lazy">
+      <h1>Nébula</h1>
+    </div>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#presentacion">Presentación</a></li>
+        <li><a href="#ambiente">Ambiente</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="titulo-hero">
+      <figure>
+        <img src="asset/img/Hero_img.webp" alt="Vista de la nebulosa de Norteamérica en tonos rojos y rosados con un campo de estrellas" width="1920" height="1080" loading="lazy">
+        <figcaption>
+          Foto de Ahmad Basem en
+          <a href="https://www.pexels.com/photo/spectacular-view-of-the-north-america-nebula-33654359/">Pexels</a>
+          · Licencia Pexels.
+        </figcaption>
+      </figure>
+      <h2 id="titulo-hero">Paisajes de ciencia ficción</h2>
+      <p>Soy Nébula, artista digital. Exploro nebulosas, planetas y mundos que todavía no existen.</p>
+    </section>
+
+    <section id="galeria" aria-labelledby="titulo-galeria">
+      <h2 id="titulo-galeria">Galería de trabajos</h2>
+      <div class="galeria">
+        <figure>
+          <img src="asset/img/iamgen1.webp" alt="Nube de gas incandescente en tonos rojos, naranjas y amarillos" width="400" height="250" loading="lazy">
+          <figcaption>Imagen de WikiImages en <a href="https://pixabay.com/es/photos/fondo-de-navidad-nebula-de-ori%C3%B3n-11107/">Pixabay</a> · Licencia Pixabay.</figcaption>
+        </figure>
+        <figure>
+          <img src="asset/img/imagen2.webp" alt="Nebulosa de la Laguna, Messier 8, con nubes de gas y estrellas jóvenes" width="400" height="250" loading="lazy">
+          <figcaption>Imagen de WikiImages en <a href="https://pixabay.com/es/photos/nebulosa-laguna-messier-8-ngc-6523-11143/">Pixabay</a> · Licencia Pixabay.</figcaption>
+        </figure>
+        <figure>
+          <img src="asset/img/imagen3.webp" alt="Nebulosa luminosa en tonos violetas y rosas sobre un fondo espacial oscuro con estrellas" width="400" height="250" loading="lazy">
+          <figcaption>Imagen de WikiImages en <a href="https://pixabay.com/es/photos/estrellas-galaxia-espacio-67616/">Pixabay</a> · Licencia Pixabay.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="presentacion" aria-labelledby="titulo-video">
+      <h2 id="titulo-video">Presentación</h2>
+      <figure>
+        <video controls preload="none" poster="asset/img/poster.webp" width="1280" height="720">
+          <source src="asset/video/video%20(1).mp4" type="video/mp4">
+          Tu navegador no admite la reproducción de vídeo.
+        </video>
+        <figcaption>
+          Vídeo de Nicola Narracci en
+          <a href="https://www.pexels.com/es-es/video/impresionante-primer-plano-de-la-superficie-solar-llameante-32682534/">Pexels</a>
+          · Licencia Pexels.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="ambiente" aria-labelledby="titulo-audio">
+      <h2 id="titulo-audio">Ambiente sonoro</h2>
+      <audio controls preload="none" src="asset/audio/untitled.mp3">
+        Tu navegador no admite la reproducción de audio.
+      </audio>
+      <p><small>Audio de SonidosKMD en <a href="https://www.youtube.com/watch?v=Dtu5Fk1qb0g">YouTube</a>.</small></p>
+    </section>
+
+    <section id="contacto" class="cta" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">¿Hablamos?</h2>
+      <p>Encarga tu paisaje o pregunta por mis trabajos.</p>
+      <a href="mailto:contacto@nebula.example">
+        <img src="asset/img/imagen_animada.webp" alt="Botón animado de contacto" width="400" height="150" loading="lazy">
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Nébula · Proyecto académico. Logotipo basado en una imagen de BoliviaInteligente en <a href="https://unsplash.com/es/fotos/un-objeto-purpura-y-rosa-flotando-en-el-aire-Ep6f8t9fYA8">Unsplash</a> · Licencia Unsplash.</p>
+  </footer>
+
 </body>
 </html>

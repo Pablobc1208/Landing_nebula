@@ -58,14 +58,14 @@ Los fotogramas de la animación CTA se generaron con **Gemini Pro** y se retocar
 | Proceso | Herramienta |
 |---|---|
 | Redimensionado, recorte y conversión a WebP (hero, galería) | Squoosh |
-| Eliminación de fondo del logotipo | [COMPLETAR: herramienta] |
-| Vectorización del logotipo a SVG | [COMPLETAR: herramienta] |
+| Eliminación de fondo del logotipo | Photoshop |
+| Vectorización del logotipo a SVG | Photoshop|
 | Generación de los fotogramas del CTA | Gemini Pro |
 | Retoque de los fotogramas | Photoshop |
-| Montaje de la animación en WebP animado | [COMPLETAR: herramienta] |
-| Compresión y transcodificación del vídeo a H.264 | [COMPLETAR: herramienta] |
-| Extracción del poster | [COMPLETAR: herramienta] |
-| Recorte, fundidos y exportación del audio | [COMPLETAR: herramienta] |
+| Montaje de la animación en WebP animado | Photoshop y EzGif |
+| Compresión y transcodificación del vídeo a H.264 | SonyVegas |
+| Extracción del poster | SonyVega |
+| Recorte, fundidos y exportación del audio | Audacity |
 | Control de versiones y publicación | Git, GitHub y GitHub Pages |
 
 ## Notas
