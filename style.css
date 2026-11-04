@@ -42,7 +42,7 @@ audio { width: 100%; }
 
 .cta { text-align: center; background: #fff; }
 .cta a { color: #fff; }
-.cta img { margin: 0 auto; border: 3px solid var(--tinta); }
+.cta img { margin: 0 auto;}
 
 footer { margin-top: 2.5rem; background: #fff; color: var(--papel); text-align: center; font-family: Arial, sans-serif; font-size: 0.8rem; }
 
