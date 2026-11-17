@@ -3,6 +3,9 @@
   --tinta: #1d1d1f;
   --naranja: #ff6a3d;
   --verde: #1fa89a;
+  --logo-color: var(--tinta);
+  --logo-hover: var(--naranja);
+  --logo-borde: var(--verde);
 }
 body {
   margin: 0;
@@ -20,8 +23,42 @@ h1, h2, h3 { font-family: Arial Black, Arial, sans-serif; text-transform: upperc
 header { background: #fff; border-bottom: 3px solid var(--tinta); }
 header, main, footer { padding: 1rem 5%; }
 header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-.marca { display: flex; align-items: center; gap: 0.6rem; }
-.marca h1 { margin: 0; font-size: 1.5rem; }
+.marca { margin: 0; font-size: 1.5rem; }
+.marca-enlace {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--tinta);          /* anula el naranja global de los <a> */
+  text-decoration: none;
+  min-height: 44px;             /* tamaño táctil mínimo */
+  border-radius: 6px;
+}
+.logo {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.logo-trazo {
+  fill: var(--logo-color);
+  stroke: transparent;
+  stroke-width: 2px;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+.logo-trazo path { vector-effect: non-scaling-stroke; }
+
+.marca-enlace:hover .logo-trazo,
+.marca-enlace:focus-visible .logo-trazo {
+  fill: var(--logo-hover);
+  stroke: var(--logo-borde);
+}
+.marca-enlace:hover .logo,
+.marca-enlace:focus-visible .logo {
+  transform: rotate(-12deg) scale(1.08);
+}
+.marca-enlace:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 4px;
+}
+
 nav ul { list-style: none; display: flex; gap: 0.5rem; margin: 0; padding: 0; }
 nav a { color: var(--tinta); text-decoration: none; padding: 0.3rem 0.8rem; border: 2px solid var(--tinta); }
 nav a:hover { background: var(--verde); color: #fff; }
