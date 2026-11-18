@@ -1,32 +1,25 @@
-// 1. Cogemos los elementos del HTML por su id
 const visorImagen = document.getElementById("visor-imagen");
 const visorEnlace = document.getElementById("visor-enlace");
 const miniatura1 = document.getElementById("mini1");
 const miniatura2 = document.getElementById("mini2");
 const miniatura3 = document.getElementById("mini3");
 
-// 2. Quita la clase "activa" de todas las miniaturas
 function quitarActiva() {
   miniatura1.classList.remove("activa");
   miniatura2.classList.remove("activa");
   miniatura3.classList.remove("activa");
 }
 
-// 3. Cambia la imagen grande con un fundido
 function cambiarImagen(boton, ruta, texto, enlace) {
-  // Si ya está seleccionada, no hacemos nada
   if (boton.classList.contains("activa")) {
     return;
   }
 
-  // Marcamos la miniatura pulsada
   quitarActiva();
   boton.classList.add("activa");
 
-  // Ocultamos la imagen (el CSS hace el fundido)
   visorImagen.classList.add("oculta");
 
-  // Esperamos 300 ms (lo que dura el fundido) y cambiamos la imagen
   setTimeout(function () {
     visorImagen.src = ruta;
     visorImagen.alt = texto;
@@ -35,7 +28,6 @@ function cambiarImagen(boton, ruta, texto, enlace) {
   }, 300);
 }
 
-// 4. Eventos de clic en cada miniatura
 miniatura1.addEventListener("click", () => {
   cambiarImagen(
     miniatura1,
@@ -84,11 +76,10 @@ btnCerrarModal.addEventListener('click', cerrarModal);
 
 
 
-modalVideo.addEventListener("click", (evento) => {
-  if (evento.target === modalVideo) {
+modal.addEventListener("click", (evento) => {
+  if (evento.target === modal) {
     cerrarModal();
   }
 });
 
 
-modalVideo.addEventListener("close", pararVideo);

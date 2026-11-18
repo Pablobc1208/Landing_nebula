@@ -718,9 +718,61 @@
 
       <section id="ambiente" aria-labelledby="titulo-audio">
         <h2 id="titulo-audio">Ambiente sonoro</h2>
-        <audio controls preload="none" src="asset/audio/untitled.mp3">
+        <p>Pon banda sonora a la galería mientras la recorres.</p>
+
+        <!-- Audio sin controles nativos: se maneja desde JavaScript -->
+        <audio
+          id="audio-ambiente"
+          preload="none"
+          loop
+          src="asset/audio/untitled.mp3"
+        >
           Tu navegador no admite la reproducción de audio.
         </audio>
+
+        <div class="reproductor">
+          <button
+            id="boton-audio"
+            class="boton-audio"
+            type="button"
+            aria-pressed="false"
+          >
+            <svg
+              class="icono-audio"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path id="icono-audio" d="M8 5v14l11-7z" />
+            </svg>
+            <span id="texto-audio">Escuchar ambiente espacial</span>
+          </button>
+
+          <button
+            id="boton-silencio"
+            class="boton-silencio"
+            type="button"
+            aria-pressed="false"
+            aria-label="Silenciar audio"
+          >
+            <svg
+              class="icono-audio"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                id="icono-silencio"
+                d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4z"
+              />
+            </svg>
+          </button>
+        </div>
+
         <p>
           <small
             >Audio de SonidosKMD en
