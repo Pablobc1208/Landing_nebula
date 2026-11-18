@@ -1,15 +1,19 @@
+// 1. GALERÍA DE IMÁGENES
+// Elementos del visor y miniaturas
 const visorImagen = document.getElementById("visor-imagen");
 const visorEnlace = document.getElementById("visor-enlace");
 const miniatura1 = document.getElementById("mini1");
 const miniatura2 = document.getElementById("mini2");
 const miniatura3 = document.getElementById("mini3");
 
+// Quita la clase activa de todas las miniaturas
 function quitarActiva() {
   miniatura1.classList.remove("activa");
   miniatura2.classList.remove("activa");
   miniatura3.classList.remove("activa");
 }
 
+// Cambia la imagen principal con efecto de transición
 function cambiarImagen(boton, ruta, texto, enlace) {
   if (boton.classList.contains("activa")) {
     return;
@@ -20,14 +24,16 @@ function cambiarImagen(boton, ruta, texto, enlace) {
 
   visorImagen.classList.add("oculta");
 
+  // Espera 300ms (tiempo de la animación) para cambiar los datos y volver a mostrarla
   setTimeout(function () {
     visorImagen.src = ruta;
     visorImagen.alt = texto;
     visorEnlace.href = enlace;
-    visorImagen.classList.remove("oculta");
+    visorImagen.classList.remove("oculta"); // Quita la clase para que reaparezca suavemente
   }, 300);
 }
 
+// Clics en cada miniatura para cambiar la imagen
 miniatura1.addEventListener("click", () => {
   cambiarImagen(
     miniatura1,
@@ -56,37 +62,45 @@ miniatura3.addEventListener("click", () => {
 });
 
 
+// 2. MODAL DE VÍDEO
+
+// Elementos del modal y reproductor de vídeo
 const botonVerVideo = document.getElementById('boton-reel');
 const modal = document.getElementById('modal-video');
 const btnCerrarModal = document.getElementById('cerrar-modal');
 const verVideo = document.getElementById('video-reel');
 
-
+// Abre el modal y reproduce el vídeo
 function abrirModal() {
   modal.showModal();
   verVideo.play().catch();
 }
 
+// Cierra el modal
 function cerrarModal() {
   modal.close();
 }
 
+// Eventos para abrir y cerrar el modal
 botonVerVideo.addEventListener('click', abrirModal);
 btnCerrarModal.addEventListener('click', cerrarModal);
 
-
-
+// Cierra el modal al hacer clic en el fondo oscuro
 modal.addEventListener("click", (evento) => {
   if (evento.target === modal) {
     cerrarModal();
   }
 });
 
+
+// 3. CONTROL DE AUDIO
+
+// Elementos del audio y sus botones
 const audio = document.getElementById('audio-ambiente');
 const botonAudio = document.getElementById('boton-audio');
 const botonSilencio = document.getElementById('boton-silencio');
 
-// Reproduce o pausa el audio
+// Reproduce o pausa el audio de fondo
 function reproducirPausar() {
   if (audio.paused) {
     audio.play();
@@ -112,5 +126,6 @@ function silenciar() {
   }
 }
 
+// Eventos de clic para controlar el audio
 botonAudio.addEventListener('click', reproducirPausar);
 botonSilencio.addEventListener('click', silenciar);
