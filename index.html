@@ -660,8 +660,50 @@
 
       <section id="presentacion" aria-labelledby="titulo-video">
         <h2 id="titulo-video">Presentación</h2>
-        <figure>
+        <p>Descubre mis paisajes espaciales en movimiento.</p>
+
+        <button id="boton-reel" class="boton-reel" type="button">
+          <svg
+            class="icono-play"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          Ver Reel de Animación
+        </button>
+
+        <p>
+          <small>
+            Vídeo de Nicola Narracci en
+            <a
+              href="https://www.pexels.com/es-es/video/impresionante-primer-plano-de-la-superficie-solar-llameante-32682534/"
+              >Pexels</a
+            >
+            · Licencia Pexels.
+          </small>
+        </p>
+      </section>
+
+      <!-- Ventana modal del vídeo -->
+      <dialog id="modal-video" class="modal" aria-labelledby="titulo-modal">
+        <div class="modal-contenido">
+          <div class="modal-cabecera">
+            <h2 id="titulo-modal">Reel de animación</h2>
+            <button
+              id="cerrar-modal"
+              class="cerrar-modal"
+              type="button"
+              aria-label="Cerrar vídeo"
+            >
+              ✕
+            </button>
+          </div>
           <video
+            id="video-reel"
             controls
             preload="none"
             poster="asset/img/poster.webp"
@@ -671,16 +713,8 @@
             <source src="asset/video/video%20(1).mp4" type="video/mp4" />
             Tu navegador no admite la reproducción de vídeo.
           </video>
-          <figcaption>
-            Vídeo de Nicola Narracci en
-            <a
-              href="https://www.pexels.com/es-es/video/impresionante-primer-plano-de-la-superficie-solar-llameante-32682534/"
-              >Pexels</a
-            >
-            · Licencia Pexels.
-          </figcaption>
-        </figure>
-      </section>
+        </div>
+      </dialog>
 
       <section id="ambiente" aria-labelledby="titulo-audio">
         <h2 id="titulo-audio">Ambiente sonoro</h2>

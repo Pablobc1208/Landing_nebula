@@ -62,3 +62,33 @@ miniatura3.addEventListener("click", () => {
     "https://pixabay.com/es/photos/estrellas-galaxia-espacio-67616/"
   );
 });
+
+
+const botonVerVideo = document.getElementById('boton-reel');
+const modal = document.getElementById('modal-video');
+const btnCerrarModal = document.getElementById('cerrar-modal');
+const verVideo = document.getElementById('video-reel');
+
+
+function abrirModal() {
+  modal.showModal();
+  verVideo.play().catch();
+}
+
+function cerrarModal() {
+  modal.close();
+}
+
+botonVerVideo.addEventListener('click', abrirModal);
+btnCerrarModal.addEventListener('click', cerrarModal);
+
+
+
+modalVideo.addEventListener("click", (evento) => {
+  if (evento.target === modalVideo) {
+    cerrarModal();
+  }
+});
+
+
+modalVideo.addEventListener("close", pararVideo);
