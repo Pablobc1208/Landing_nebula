@@ -59,8 +59,8 @@ header { display: flex; justify-content: space-between; align-items: center; fle
   outline-offset: 4px;
 }
 
-nav ul { list-style: none; display: flex; gap: 0.5rem; margin: 0; padding: 0; }
-nav a { color: var(--tinta); text-decoration: none; padding: 0.3rem 0.8rem; border: 2px solid var(--tinta); }
+nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0; padding: 0; }
+nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--tinta); text-decoration: none; padding: 0 0.8rem; border: 2px solid var(--tinta); }
 nav a:hover { background: var(--verde); color: #fff; }
 
 main { max-width: 1000px; margin: 0 auto; }

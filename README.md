@@ -112,12 +112,23 @@ El proyecto se publica con **CC BY-NC 4.0**: se puede reutilizar citando al auto
 
 ## 10. Verificación cross-browser y responsive
 
+Las pruebas están grabadas en este vídeo: [Vídeo de verificación](asset/video/video_Informativo/2026-11-18%2022-52-27.mp4)
+
 | Funcionalidad | Chrome | Firefox | Edge |
 |---|---|---|---|
-| Logo SVG (hover/focus) | ⬜ | ⬜ | ⬜ |
-| Galería | ⬜ | ⬜ | ⬜ |
-| Modal de vídeo (play al abrir / pause al cerrar) | ⬜ | ⬜ | ⬜ |
-| Audio (play, pause, silenciar) | ⬜ | ⬜ | ⬜ |
-| Consola sin errores | ⬜ | ⬜ | ⬜ |
+| Logo SVG (hover/focus) | ✅ | ✅ | ✅ |
+| Galería | ✅ | ✅ | ✅ |
+| Modal de vídeo (play al abrir / pause al cerrar) | ✅ | ✅ | ✅ |
+| Audio (play, pause, silenciar) | ✅ | ✅ | ✅ |
+| Consola sin errores | ✅ | ✅ | ✅ |
 
-**Modo dispositivo (DevTools):** probado en móvil (375 px) y tablet (768 px). Todos los botones miden como mínimo 44x44 px. ⬜
+**Modo dispositivo (DevTools):** probado en móvil (375 px) y tablet (768 px). No hay scroll horizontal y todos los botones miden como mínimo 44x44 px:
+
+| Botón | Móvil 375 px | Tablet 768 px |
+|---|---|---|
+| Enlaces del menú | 81x48 | 81x48 |
+| Miniaturas galería | 84x55 | 202x128 |
+| Ver Reel de Animación | 284x68 | 293x56 |
+| Cerrar modal ✕ | 44x44 | 44x44 |
+| Escuchar ambiente espacial | 284x68 | 319x50 |
+| Silenciar | 111x50 | 111x50 |
