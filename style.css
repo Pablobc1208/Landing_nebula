@@ -72,7 +72,6 @@ section h2 { margin-top: 0; }
 .titulo-seccion h2 { margin: 0 0 1rem; }
 
 .hero img, .galeria img, video { border: 3px solid var(--tinta); }
-.galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
 
 .escenario { display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; }
 audio { width: 100%; }
@@ -85,4 +84,53 @@ footer { margin-top: 2.5rem; background: #fff; color: var(--papel); text-align: 
 
 @media (max-width: 700px) {
   .escenario { grid-template-columns: 1fr; }
+}
+
+/* ===== Galería dinámica ===== */
+.visor-imagen {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 3px solid var(--tinta);
+  transition: opacity 0.3s ease;
+}
+.visor-imagen.oculta { opacity: 0; }
+
+.miniaturas {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.miniatura {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 0;
+  background: none;
+  border: 3px solid var(--tinta);
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0.65;
+  transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;
+}
+.miniatura img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+.miniatura:hover,
+.miniatura:focus-visible {
+  transform: scale(1.05);
+  opacity: 1;
+}
+.miniatura:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 3px;
+}
+.miniatura:active { transform: scale(0.97); }
+.miniatura.activa {
+  opacity: 1;
 }
