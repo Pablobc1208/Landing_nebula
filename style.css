@@ -263,16 +263,16 @@ footer { margin-top: 2.5rem; background: #fff; color: var(--papel); text-align: 
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  background: var(--verde);
+  background: var(--naranja);
 }
 .boton-silencio {
-  width: 56px;
-  height: 56px;
-  padding: 0;
+  padding: 0.8rem 1.2rem;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
   color: var(--tinta);
   background: #fff;
 }
-.icono-audio { fill: currentColor; }
 
 .boton-audio:hover,
 .boton-audio:focus-visible,
@@ -294,7 +294,6 @@ footer { margin-top: 2.5rem; background: #fff; color: var(--papel); text-align: 
 
 /* Estado: sonando */
 .boton-audio.sonando { background: var(--naranja); }
-.boton-audio.sonando .icono-audio { animation: latido 1s ease-in-out infinite; }
 
 /* Estado: silenciado */
 .boton-silencio.silenciado {

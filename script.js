@@ -82,4 +82,35 @@ modal.addEventListener("click", (evento) => {
   }
 });
 
+const audio = document.getElementById('audio-ambiente');
+const botonAudio = document.getElementById('boton-audio');
+const botonSilencio = document.getElementById('boton-silencio');
 
+// Reproduce o pausa el audio
+function reproducirPausar() {
+  if (audio.paused) {
+    audio.play();
+    botonAudio.textContent = 'Pausar ambiente espacial';
+    botonAudio.classList.add('sonando');
+  } else {
+    audio.pause();
+    botonAudio.textContent = 'Escuchar ambiente espacial';
+    botonAudio.classList.remove('sonando');
+  }
+}
+
+// Silencia o activa el sonido
+function silenciar() {
+  audio.muted = !audio.muted;
+
+  if (audio.muted) {
+    botonSilencio.textContent = 'Activar sonido';
+    botonSilencio.classList.add('silenciado');
+  } else {
+    botonSilencio.textContent = 'Silenciar';
+    botonSilencio.classList.remove('silenciado');
+  }
+}
+
+botonAudio.addEventListener('click', reproducirPausar);
+botonSilencio.addEventListener('click', silenciar);
